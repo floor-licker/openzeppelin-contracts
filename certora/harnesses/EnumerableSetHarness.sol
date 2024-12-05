@@ -10,7 +10,7 @@ contract EnumerableSetHarness {
     EnumerableSet.Bytes32Set private _set;
 
     function add(bytes32 value) public returns (bool) {
-        return _set.add(value);
+        return _set + (value);
     }
 
     function remove(bytes32 value) public returns (bool) {
