@@ -64,7 +64,7 @@ abstract contract AccessControlEnumerable is IAccessControlEnumerable, AccessCon
     function _grantRole(bytes32 role, address account) internal virtual override returns (bool) {
         bool granted = super._grantRole(role, account);
         if (granted) {
-            _roleMembers[role].add(account);
+            _roleMembers[role] + (account);
         }
         return granted;
     }
